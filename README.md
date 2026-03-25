@@ -1,4 +1,4 @@
-# Antigravity Travel Agent
+# Travel Agent
 
 A premium, AI-powered travel assistant specialized in planning trips across China. This agent leverages the Model Context Protocol (MCP) to access real-time data for maps, railways, and local discovery, providing a high-density, real-time planning experience.
 
