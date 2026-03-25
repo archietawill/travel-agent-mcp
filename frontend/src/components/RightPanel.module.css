@@ -1,0 +1,225 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.header p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Placeholder List Styles */
+.placeholderList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.placeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: transform var(--transition-fast);
+}
+
+.placeItem:hover {
+  transform: translateX(-2px);
+  background: rgba(62, 74, 91, 0.05);
+}
+
+.placeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.placeName {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.placeCategory {
+  font-size: 0.75rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.removeBtn {
+  color: var(--text-secondary);
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.removeBtn:hover {
+  background: rgba(239, 68, 68, 0.1); /* red-500 tint */
+  color: var(--error);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8) 0;
+  color: var(--text-secondary);
+  gap: var(--space-4);
+}
+
+.synthesizeBtn {
+  width: 100%;
+  margin-top: var(--space-4);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Daily Itinerary Styles */
+.itineraryContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.dayBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.dayHeader {
+  position: sticky;
+  top: 0;
+  background: var(--bg-secondary);
+  padding: var(--space-2) 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dayTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.daySubtitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3px;
+  width: 1px;
+  background: var(--border-color);
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: var(--bg-tertiary);
+  padding: var(--space-4);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.timelineDot {
+  position: absolute;
+  top: 18px;
+  left: -21px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent);
+}
+
+.timeLabel {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.itemTitle {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.itemNotes {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.itemMeta {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.metaBadge {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  background: rgba(62, 74, 91, 0.08);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}

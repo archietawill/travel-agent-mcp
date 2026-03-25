@@ -1,0 +1,189 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(62, 74, 91, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-4);
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 600px;
+  /* Wider */
+  max-height: 90vh;
+  height: 65vh;
+  overflow-y: auto;
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  /* More spacious */
+  animation: scaleIn var(--transition-spring);
+}
+
+/* Override react-datepicker styles to match theme */
+:global(.react-datepicker) {
+  font-family: var(--font-main);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+:global(.react-datepicker__header) {
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+:global(.react-datepicker__day--selected) {
+  background-color: var(--accent) !important;
+}
+
+:global(.react-datepicker__input-container input) {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.header h2 {
+  font-size: 1.75rem;
+  /* Larger */
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.header p {
+  font-size: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  /* More gap */
+}
+
+.formGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.searchContainer {
+  position: relative;
+}
+
+.searchInput {
+  padding-left: 2.5rem;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  margin-top: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+  /* Lighter shadow */
+}
+
+.dropdownItem {
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.dropdownItem:hover {
+  background-color: var(--bg-secondary);
+}
+
+.selectedCity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  padding: var(--space-4);
+  border-radius: 12px;
+}
+
+.cityInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cityInfo span {
+  font-weight: 500;
+}
+
+.daysInput {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.daysInput input {
+  width: 60px;
+  text-align: center;
+  padding: var(--space-2);
+}
+
+.daysInput span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
